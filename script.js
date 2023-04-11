@@ -184,3 +184,26 @@ btnTransfer.addEventListener("click", (e) => {
     updateUI(currentAccount);
   }
 });
+
+// Add close account functionality
+btnClose.addEventListener("click", (e) => {
+  e.preventDefault();
+  // Clear input fields
+  // Close current account
+  inputCloseUsername.textContent = "hello";
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.username === currentAccount.username
+    );
+    console.log(index);
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    //containerApp.style.opacity = 0;
+  }
+  inputCloseUsername.value = inputClosePin.value = "";
+});
