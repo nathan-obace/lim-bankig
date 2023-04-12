@@ -48,7 +48,6 @@ const btnTransfer = document.querySelector(".form__btn--transfer");
 const btnLoan = document.querySelector(".form__btn--loan");
 const btnClose = document.querySelector(".form__btn--close");
 const btnSort = document.querySelector(".btn--sort");
-
 const inputLoginUsername = document.querySelector(".login__input--user");
 const inputLoginPin = document.querySelector(".login__input--pin");
 const inputTransferTo = document.querySelector(".form__input--to");
@@ -190,7 +189,6 @@ btnClose.addEventListener("click", (e) => {
   e.preventDefault();
   // Clear input fields
   // Close current account
-  inputCloseUsername.textContent = "hello";
   if (
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value) === currentAccount.pin
@@ -203,7 +201,8 @@ btnClose.addEventListener("click", (e) => {
     accounts.splice(index, 1);
 
     // Hide UI
-    //containerApp.style.opacity = 0;
+    containerApp.style.opacity = 0;
   }
-  inputCloseUsername.value = inputClosePin.value = "";
+  inputCloseUsername.value = "";
+  inputClosePin.value = "";
 });
