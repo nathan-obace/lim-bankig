@@ -20,10 +20,10 @@ To get started with the app, clone the repository to your local machine:
 
 bash
 
-git clone https://github.com/your-username/simple-banking-app.git
+git clone https://github.com/nathan-obace/lim-banking.git
 
 Then, open the index.html file in your web browser to use the app. 
-OR You can have visit a live version of the application here: 
+OR You can have visit a live version of the application here: https://nathan-obace.github.io/lim-banking/
 Contributing
 
 If you'd like to contribute to the app, feel free to fork the repository and submit a pull request with your changes.
